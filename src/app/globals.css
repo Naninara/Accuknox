@@ -22,7 +22,11 @@
     text-wrap: balance;
   }
   .no-scrollbar::-webkit-scrollbar {
-    display: none;
+    width: 5px;
+    height: 2px;
+  }
+  .no-scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
   }
 }
 
