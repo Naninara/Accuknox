@@ -12,9 +12,12 @@ function SectionalWidgets({ sectionName, sectinalWidgetsData, sectionId }) {
   async function delCategory() {
     const isOk = confirm("Are you sure? this can't be undone!!");
     if (!isOk) return;
+
     const otherCategories = sectionalWidgets.filter((ele) => {
-      ele.sectionId != sectionId;
+      return ele.sectionId !== sectionId + "";
     });
+
+    console.log(otherCategories);
     const loading = toast.loading("Deleting Category");
     await axios
       .post("http://localhost:3000/api/addcategory", [...otherCategories])

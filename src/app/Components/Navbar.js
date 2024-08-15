@@ -1,32 +1,41 @@
 "use client";
 import axios from "axios";
-import React, { useContext, useState } from "react";
-import { DashBoardContext } from "../hooks/DataContext";
+import React, { useState } from "react";
+
 import AddCategory from "./AddCategory";
+import Personalization from "./Personalization";
 
 function Navbar() {
-  const { sectionalWidgets } = useContext(DashBoardContext);
   const [isCategoryOpen, setCategoryOpen] = useState(false);
+
+  const [isPersonalizationOpen, setIsPersonalizationOpen] = useState(false);
 
   return (
     <div
       className="w-full bg-[#f0f5fa] flex p-[2%] justify-between items-center font-dm sticky
-     top-0 shadow-sm relative transition-all duration-500"
+     top-0 shadow-sm  transition-all duration-500"
     >
       <div className="font-extrabold ">
         <p>CNAPP Dashboard</p>
       </div>
       <div className="flex gap-5">
         <button
-          className="bg-white h-[40px] w-[120px] rounded-[5px] shadow  shadow-gray-500"
+          className="bg-white h-[40px] w-[50px] md:h-[40px] md:w-[120px] rounded-[5px] shadow  shadow-gray-500"
           onClick={() => {
             setCategoryOpen(!isCategoryOpen);
           }}
         >
-          Add widget +
+          <p className="hidden md:block">Add widget +</p>
+          <p className="block md:hidden">+</p>
         </button>
-        <button className="bg-white h-[40px] w-[120px] rounded-[5px] shadow  shadow-gray-500">
-          Personalize ✏️
+        <button
+          className="bg-white h-[40px] w-[50px] md:h-[40px] md:w-[120px] rounded-[5px] shadow  shadow-gray-500"
+          onClick={() => {
+            setIsPersonalizationOpen(true);
+          }}
+        >
+          <p className="hidden md:block">Personalize ✏️</p>
+          <p className="block md:hidden">✏️</p>
         </button>
       </div>
       {isCategoryOpen && (
@@ -34,6 +43,13 @@ function Navbar() {
           <AddCategory
             setCategoryOpen={setCategoryOpen}
             isCategoryOpen={isCategoryOpen}
+          />
+        </div>
+      )}
+      {isPersonalizationOpen && (
+        <div className="absolute top-0 right-0 h-[100vh] w-[100vw] md:w-[50vw] bg-white">
+          <Personalization
+            setIsPersonalizationOpen={setIsPersonalizationOpen}
           />
         </div>
       )}

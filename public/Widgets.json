@@ -1,1 +1,44 @@
-[{"sectionName":"Mavin","sectionId":"5xd4a","sectinalWidgetsData":[{"name":"Sub Section 1","text":"Sub Section 2","id":"p9ei2"}]}]
+[
+  {
+    "sectionName": "CSPM Executive DashBoard",
+    "sectionId": "gttr5",
+    "sectinalWidgetsData": [
+      {
+        "name": "Cloud Accounts\"",
+        "text": "Cloud Accounts Dummy Test",
+        "id": "6mguvj"
+      },
+      { "name": "Cloud Risk", "text": "Cloud Risk Dummy Test", "id": "lt44f" },
+      {
+        "name": "Cloud Accounts",
+        "text": "Give Information about Cloud Accounts",
+        "id": "5ogua"
+      },
+      {
+        "name": " Information ",
+        "text": "Dummy Test Regards Info",
+        "id": "unwuf"
+      }
+    ]
+  },
+  {
+    "sectionName": "CWPP DashBoard",
+    "sectionId": "9abnl",
+    "sectinalWidgetsData": [
+      {
+        "name": "Top 5 Namespace specific alerts",
+        "text": "Dummy Text",
+        "id": "8xtifl"
+      },
+      { "name": "Workload alerts", "text": "Dummy Text", "id": "pfzr5j" }
+    ]
+  },
+  {
+    "sectionName": "Registry Scan",
+    "sectionId": "qj8ydi",
+    "sectinalWidgetsData": [
+      { "name": "Image Risk Assesment", "text": "Dummy One", "id": "wtfdu" },
+      { "name": "Image Security Issues", "text": "Dummy", "id": "s9oroj" }
+    ]
+  }
+]
